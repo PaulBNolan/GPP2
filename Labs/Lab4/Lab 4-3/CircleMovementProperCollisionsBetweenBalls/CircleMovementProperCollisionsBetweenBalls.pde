@@ -16,12 +16,12 @@ void setup()
   radius = new float[2];
   
   circlePos[0] = new PVector(width / 2,height / 2,0);
-  circleVel[0] = new PVector(random(-20,20),random(-20,20),0);
+  circleVel[0] = new PVector(random(-25,25),random(-25,25),0);
   mass[0] = 4;
   radius[0] = 50;
   
   circlePos[1] = new PVector(width / 4, height / 4);
-  circleVel[1] = new PVector(random(-20,20),random(-20,20));
+  circleVel[1] = new PVector(random(-25,25),random(-25,25));
   mass[1] = 8;
   radius[1] = 75;
 }
