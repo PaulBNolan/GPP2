@@ -6,6 +6,7 @@ float[] radius;
 float lengthBetween;
 
 boolean collision = false;
+
 void setup()
 {
   size(640,640);
@@ -37,11 +38,13 @@ void draw()
   if(circlePos[i].x - radius[i] /2 < 0 || circlePos[i].x + radius[i]/2 > width)
   {
     circleVel[i].x = -circleVel[i].x;
+     circlePos[i].add(circleVel[i]);
   }
   
   if(circlePos[i].y - radius[i] / 2 < 0 || circlePos[i].y + radius[i]/2 > height)
   {
     circleVel[i].y = -circleVel[i].y;
+    circlePos[i].add(circleVel[i]);
   }
   }
   

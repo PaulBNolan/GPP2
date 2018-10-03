@@ -1,20 +1,14 @@
-PVector[] circlePos;
-PVector[] circleVel;
+PVector circlePos;
+PVector circleVel;
 
 float radius;
 
 void setup()
 {
-  size(1280,1280);
-  
-  circlePos = new PVector[2];
-  circleVel = new PVector[2];
+  size(640,640);
   
   circlePos = new PVector(width / 2,height / 2,0);
   circleVel = new PVector(random(-10,10),random(-10,10),0);
-  
-  circlePos2 = new PVector(width / 4, height / 4);
-  circleVel2 = new PVector(random(-10,10),random(-10,10));
   
   radius = 40;
 }

@@ -57,7 +57,7 @@ void draw()
    seconds = millis();
   }
   
-  if(seconds == millis() - 1000)
+  if(seconds <= millis() - 1000)
   {
     fill(255,255,255);
     collision = false;
