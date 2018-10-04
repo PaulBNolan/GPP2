@@ -1,3 +1,5 @@
+import processing.sound.*;
+
 PVector circlePos;
 PVector circleVel;
 PVector playerRelativePosition;
@@ -14,6 +16,8 @@ PVector guardPosition;
 PVector guardVelocity;
 PVector guardDirection;
 float fieldOfView;
+
+SoundFile alert;
 void setup()
 {
   size(1200,1200);
@@ -31,6 +35,8 @@ void setup()
   guardPosition = new PVector(width/4, height/4);
   guardVelocity = new PVector(1,0);
   guardDirection = new PVector(1,0);
+  
+  alert = new SoundFile(this,"Assets/alert.mp3");
 }
 
 void draw()
@@ -74,6 +80,10 @@ void draw()
     if(angleD <= 60.0f)
     {
       fill(120,120,120);
+      if(((millis()) % 1000) <= 100.0f)
+      {
+      alert.play();
+      }
     }
     print(angleD, "\n");
   }
