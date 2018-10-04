@@ -39,13 +39,6 @@ void draw()
 {
   background(0,0,0);
  
-  
-  //accel.setMag(2 * random(0,5));
-  //circleVel.mag();
-  //print(circleVel.mag());
-  
- // circleVel.add(accel);
- // circleVel.limit(5);
   for(int i = 0; i < circlePos.length; i++)
   {
     circlePos[i].add(circleVel[i]);
