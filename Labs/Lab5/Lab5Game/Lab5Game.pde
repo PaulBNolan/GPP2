@@ -7,9 +7,9 @@ float red;
 float green;
 float blue;
 
-float lengthBetween;
+PImage guard;
 
-boolean collision = false;
+
 void setup()
 {
   size(1200,1200);
@@ -22,6 +22,7 @@ void setup()
   green = random(0,255);
   blue = random(0,255);
   
+  guard = loadImage("Assets/GuardSprite.png");
 }
 
 void draw()
@@ -30,7 +31,7 @@ void draw()
   
   fill(red,green,blue);
   ellipse(circlePos.x,circlePos.y,radius,radius);
-  
+  image(guard,width/4, height/4);
 }
 
 void keyPressed()
